@@ -1,0 +1,88 @@
+{
+	"movieRecord" : false,
+
+	"inputMode" : 0,
+
+	"globalVar" : {
+		"speech_offset_db" : 30.0,
+		"pitch_offset_db" : 30.0
+		},
+
+	"audioData" : { 
+		"sampling_rate" : 44100,
+		"channel" : 2,
+		"buff_length_mono" : 2048,
+		
+		"min_freq_low" : 40, "max_freq_low" : 200,
+		"min_freq_mid" : 220, "max_freq_mid" : 4000,
+		"min_freq_high" : 4200, "max_freq_high" : 20000,
+		
+		"min_bar_low" : -65.0, "max_bar_low" : -45.0,	
+		"min_bar_mid" : -80.0, "max_bar_mid" : -60.0, 
+		"min_bar_high" : -95.0, "max_bar_high" : -75.0,
+		
+		"energy_offset" : 0.0,
+
+		"pitch_estimation" : {
+			"min_pitch" : 80,
+			"max_pitch" : 260
+		}
+		
+		},
+	
+
+    "display" : { "width" : 640, "height" : 480, 
+				  "x" : 0, "y" : 0,
+				  "alwaysOnTop" : false,
+				  "borderLess" : true,
+				  "hideCursor" : false },
+				  
+	"assetPath" : "",
+
+	"audioTemplate" : { "path" : "relativeToAssetPath", "playOption" : { "loop" : false } },
+	
+	"videoWithDisplayAreaTemplate" : 
+		{ "path" : "relativeToAssetPath", "audioPath" : "relativeToAssetPath", "loadOption" : "surface | texture | gstreamer | quicktime",
+		  "blendMode" : "none | premultiply | multiply | over | add | screen", "playOption" : { "loop" : false, "pingpong" : false },
+		  "displayArea" : {
+			 "size" : { "width" : 1, "height" : "auto" }, "position" : { "x" : 0, "y" : 0 }, 
+			 "pivot" : { "x" : 0, "y" : 0 }, "rotation" : 0
+		  } 
+	    },
+
+	"videoTemplate" : 
+		{ "path" : "relativeToAssetPath", "audioPath" : "relativeToAssetPath", "loadOption" : "surface | texture | gstreamer | quicktime",
+		  "blendMode" : "none | premultiply | multiply | over | add | screen", "playOption" : { "loop" : false, "pingpong" : false }
+	    },
+
+	"cameraTemplate" : {
+		"index" : 0,
+		"size" : { "width" : 1920, "height" : 1080 },
+		"mirror" : false,
+		"properties" : {
+			"translation" : { "x" : 9.4045319774609015e-001, "y" : 5.1591063111136357e+001, "z" : -1.0590903034455167e+001 },
+			"rotation" : [ 9.9986302928375637e-001, -1.4519449534790238e-002, -7.9440705382586886e-003,
+							1.4832464114262487e-002, 9.9905415759338856e-001, 4.0875276190674679e-002,
+							7.3430701895913896e-003, -4.0987507615998071e-002, 9.9913267564404040e-001	],
+			"verticalFov" : 39.2404,
+			"aspectRatio" : 1.7778,
+			"nearPlane" : 0.1,
+			"farPlane" : 10000,
+			"offsetInPercent" : { "x" : 0.0, "y" : 0.0 }
+		}
+	},
+
+	"cameraTemplateWithoutProperties" : {
+		"index" : 0,
+		"size" : { "width" : 1920, "height" : 1080 },
+		"mirror" : false
+	},
+
+	"kinectTemplate" : {
+		"index" : 0,
+		"rangeInMm" : { "min" : 50, "max" : 4000 },
+		"mirror" : true,
+		"oniFile" : "",
+		"motor" : false
+	}
+}
